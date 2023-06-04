@@ -8,19 +8,23 @@
     <title>Aint A Calculator</title>
 </head>
 <body>
-    <h2>Don't Count on Me</h2>
+    <h2 class="count">Don't Count on Me</h2>
+    <div class="tog">
+        <input type="checkbox" id="checkboxInput">
+        <label for="checkboxInput" class="toggleSwitch"></label>
+    </div>  
     <div class="container flex flex-col">
         <div class="row">
-            <input class="input" type="text"/>
+            <input class="inp" type="text"/>
         </div>
         <div class="row">
-            <button class="btns sym">x</button>
+            <button class="btns sym">*</button>
             <button class="btns">7</button>
             <button class="btns">8</button>
             <button class="btns">9</button>
         </div>
         <div class="row">
-            <button class="btns sym">÷</button>
+            <button class="btns sym">/</button>
             <button class="btns">4</button>
             <button class="btns">5</button>
             <button class="btns">6</button>
@@ -35,7 +39,10 @@
             <button class="btns sym">-</button>
             <button class="btns">0</button>
             <button class="btns">.</button>
-            <button class="btns" id="ans">=</button>
+            <button class="btns ans">=</button>
+        </div>
+        <div class="row">
+            <button class="btns back">AC</button>
         </div>
     </div>
     <div>

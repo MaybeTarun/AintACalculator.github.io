@@ -3,6 +3,7 @@
 * {
     font-family: 'Wix Madefor Text', sans-serif;
     background-color: #F9E0BB;
+    
 }
 
 html, body {
@@ -11,10 +12,17 @@ html, body {
     overflow-x: hidden;
 }
 
+.tog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
 h2 {
     text-align: center;
     font-size: 2.5em;
-    padding-bottom: 2%;
+    color: #242423;
 }
 
 h3 {
@@ -35,7 +43,6 @@ h3 i {
 .container {
     margin: auto;
     align-items: center;
-    padding-bottom: 2%;
 }
 
 .flex {
@@ -74,7 +81,53 @@ h3 i {
     background-color: #FFC26F;
 }
 
-#ans {
+.back {
+    padding: 10px 125px;
+    background-color: #FFC26F;
+}
+
+.ans {
     background-color: #C38154;
 }
 
+
+#checkboxInput {
+    display: none;
+}
+  
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: #FFC26F;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+  
+.toggleSwitch::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition-duration: .2s;
+    box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
+    border: 5px solid white;
+}
+  
+#checkboxInput:checked+.toggleSwitch::after {
+    transform: translateX(100%);
+    transition-duration: .2s;
+    background-color: white;
+}
+
+#checkboxInput:checked+.toggleSwitch {
+    background-color: #C38154;
+    transition-duration: .2s;
+}
