@@ -131,3 +131,76 @@ h3 i {
     background-color: #C38154;
     transition-duration: .2s;
 }
+
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F9E0BB;
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #FFC26F;
+    width: 450px;
+    height: fit-content;
+    z-index: 2;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid #884A39;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup p {
+    padding: 10px;
+    background-color: #FFC26F;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.popup input {
+    color: #000;
+    font-size: 25px;
+    border: 3px solid #884A39;
+}
+
+.popup button {
+    padding: 5px 10px;
+    margin: 20px;
+    border: 3px solid #884A39;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    -webkit-filter: brightness(110%);
+    filter: brightness(110%);
+}
+
+@keyframes shake {
+    0% { transform: translateX(-5px); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
